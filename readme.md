@@ -22,7 +22,7 @@
 
 ### Running the Application
 
-Run com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication as a Java Application.
+Run RestfulWebServicesApplication as a Java Application.
 
 - http://localhost:8080/hello-world
 
@@ -60,7 +60,7 @@ ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","RestfulWebServicesApplication"]
 ```
 
 ## Plugins
@@ -136,7 +136,7 @@ ENTRYPOINT ["java","-cp","app:app/lib/*","com.in28minutes.rest.webservices.restf
 		<jvmFlags>
 			<jvmFlag>-Xms512m</jvmFlag>
 		</jvmFlags>
-		<mainClass>com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication</mainClass>
+		<mainClass>RestfulWebServicesApplication</mainClass>
 		<ports>
 			<port>8100</port>
 		</ports>
